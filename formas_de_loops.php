@@ -27,17 +27,28 @@
       <p class="cor"><?=$i?></p><!-- //Diferença de atribuição de cor deste exemplo para o exemplo acima -->
     <?php endfor; ?>
 
+    <hr>
+
     <?php
 
       $nomes = ["Hugo","João","Renan","Bruno","Regina","Nasmin","Alana","Bianca","Wesley"];
 
       echo "<ul>";
       foreach ($nomes as $nome) {
-        echo "<li>$nome<\li>";
+        echo "<li>$nome";
       }
       echo "</ul>"
-
      ?>
+
+     <hr>
+     <!-- Note como a segunda maneira (abaixo) é mais apresentavel -->
+     <ul>
+
+       <?php foreach ($nomes as $nome): ?>
+         <li><?=$nome?></li>
+       <?php endforeach; ?>
+
+     </ul>
 
 
 </body>
